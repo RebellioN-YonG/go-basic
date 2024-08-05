@@ -1,3 +1,3 @@
-This is RebellioN's golang leaning notes which has recorded his learning route.
+# This is RebellioN's golang leaning notes which has recorded his learning route.
 
-Reference: Get.Programming.Go.Nathan.Youngman
+## Reference: Get.Programming.Go.Nathan.Youngman
