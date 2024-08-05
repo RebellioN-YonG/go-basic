@@ -1,3 +1,6 @@
-# This is RebellioN's golang leaning notes which has recorded his learning route.
+# GO-BASIC BY REBELLION YONG
 
-## Reference: Get.Programming.Go.Nathan.Youngman
+This is RebellioN's golang leaning notes which has recorded his learning route.
+
+
+### Reference: Get.Programming.Go.Nathan.Youngman
