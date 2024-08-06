@@ -3,4 +3,4 @@
 This is RebellioN's golang leaning notes which has recorded his learning route.
 
 
-### Reference: [Get Programming with Go by Nathan oungman](https://www.amazon.com/Get-Programming-Go-Nathan-Youngman/dp/1617293091)
+### Reference: [Get Programming with Go by Nathan Youngman](https://www.amazon.com/Get-Programming-Go-Nathan-Youngman/dp/1617293091)
