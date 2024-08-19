@@ -1,35 +1,78 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+	"math/rand"
+
+)
 
 // capstone 4.6.1 : Conway's Game of Life
 
-//
+// A new universe
 
 const (
-	width  = 80
-	height = 15
+	width  = 8
+	height = 8
 )
 
-type universes [][]bool
+type universe[][] bool
 
-func new() universes{
-	make(universes[][], height, width)
+func new() universe {
+	u := make(universe, height)
+	for i := range u {
+		u[i] = make([]bool, width)
+	}
+	return u
+}
+
+func (n universe) Show() {
 	for i := 0; i < height; i++ {
 		for j := 0; j < width; j++ {
-			universes[i][j] = false
-		}	
+				fmt.Printf("%v ", n[i][j])			
+		}
+		fmt.Println()
 	}
 }
 
-func ()Show()  {
-	fmt.Println(universes)
+func (n universe) Seed() {
+	
+	cnt := height * width / 4
+	for i := 0; i <= cnt; i++ {
+		x := rand.Intn(height) 
+		y := rand.Intn(width) 
+		n[x][y] = true
+	}	
+}
+
+func (n universe) Alive(x, y int) bool {
+		
+	if y - 1 < 0  {
+		y = height - 1
+	}
+
+	if y + 1 > height - 1 {
+		y = 0
+	}
+
+	if x - 1 < 0 {
+		x = width - 1		
+	}
+
+	if x + 1 > width - 1 {
+		x = 0
+	}		
+
+	x := rand.Intn(height) 
+	y := rand.Intn(width) 
+	n[x][y] = true
+
+	return n
 }
 
 func main() {
 
-	new()
-	
-	fmt.Println("")
+	n := new()
+	n.Seed()
+	n.Show()
 
 }
