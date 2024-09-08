@@ -29,6 +29,9 @@ func main() {
 	sortStrings(food, nil)
 	fmt.Println(food)
 
+	sortLen(food, nil)
+	fmt.Println(food)
+
 	// if a slice is declared but not initialized
 	// it's value is nil
 	var soup []string
@@ -122,6 +125,15 @@ func sortStrings(s []string, less func(i, j int) bool) {
 	if less == nil {
 		less = func(i, j int) bool {
 			return s[i] < s[j]
+		}
+	}
+	sort.Slice(s, less)
+}
+
+func sortLen(s []string, less func(i, j int) bool) {
+	if less == nil {
+		less = func(i, j int) bool {
+			return len(s[i]) < len(s[j])
 		}
 	}
 	sort.Slice(s, less)
