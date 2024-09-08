@@ -4,7 +4,7 @@ import "fmt"
 
 func main() {
 
-	//use type to assign new type
+	//use type to declare new type
 
 	// just like define in C/Cpp
 	type f64 float64
